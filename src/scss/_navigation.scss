@@ -1,0 +1,26 @@
+.nav{
+    background: #A30000;
+    display: flex;
+    max-width: 100%;
+    color:white;
+
+    &-logo{
+        flex-grow: 1;
+    }
+
+    &-buttonlistaprod{
+        color:white;
+        padding: 10px;
+        max-width: 20%;
+        a{
+            
+            align-items: center;
+
+        }
+
+        &:hover{
+            background: #EC9F05;
+        }
+
+    }
+}

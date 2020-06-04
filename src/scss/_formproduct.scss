@@ -1,0 +1,18 @@
+.form{
+    display: block;
+    
+    &-title{
+        text-align: center;
+    }
+    &-inputs{
+        display: block;
+        text-align: center;
+        padding: 20px;
+        
+    }
+    &-input{
+        display: flex;
+        width: 100%;
+        
+    }
+}
