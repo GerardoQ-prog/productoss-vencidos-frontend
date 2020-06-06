@@ -11,6 +11,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-form": "^5.7.2",
+    "react-html-table-to-excel": "^2.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "sweetalert2": "^9.14.0"
