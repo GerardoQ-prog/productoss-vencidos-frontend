@@ -2,9 +2,8 @@ import React,{useState} from 'react';
 import Axios from '../../config/axios'
 import {useForm} from 'react-hook-form'
 import Swal from 'sweetalert2'
-import { useHistory } from "react-router-dom";
 
-const FormProduct = (props) => {
+const FormProduct = () => {
 
     const {register, errors, handleSubmit, reset } = useForm();
 
@@ -17,8 +16,8 @@ const FormProduct = (props) => {
         
 
     })
-    const newProduct = () =>{
-        
+    const newProduct = (data,e) =>{
+        e.target.reset();
         //envair peticion
         Axios.post('/products',product)
         .then(res =>{
