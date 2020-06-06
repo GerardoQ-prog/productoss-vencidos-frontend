@@ -19,7 +19,6 @@ const Products = () => {
     }, []
     )
 
-
     return ( 
         <Fragment>
             <h1>Registro</h1>
