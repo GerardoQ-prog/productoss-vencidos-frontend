@@ -21,7 +21,7 @@ const Products = () => {
 
     return ( 
         <Fragment>
-            <h1>Registro</h1>
+            <h1>Productos</h1>
             <Link to={"/"} 
             className="btn-nuevo-prod">Nuevo Producto</Link>
             <ReactHTMLTableToExcel
@@ -31,16 +31,16 @@ const Products = () => {
                     filename="tablexls"
                     sheet="tablexls"
                     buttonText="Download as XLS"/>
-            <table className="table-products" id="table-to-xls">
-
-            <tr>
-               <td>Descripcion</td>
-               <td>Sku</td>
-               <td>Area</td>
-               <td>Fecha de retiro</td>
-               <td>Fecha de vencimiento</td>
-           </tr>
-
+            <table className="tablep" id="table-to-xls">
+            <thead>
+            <tr className="tablep-thead">
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>              
+           </thead>
            <tbody>
                
                {

@@ -57,67 +57,81 @@ const FormProduct = () => {
 
 
     return ( 
-      <form className="form" onSubmit={handleSubmit(newProduct)}  >
+        <div className="form-container">
+             <form className="form" onSubmit={handleSubmit(newProduct)}  >
           <div className="form-title">
               Registro de Productos
           </div>
           <div className="form-inputs">
-          <label>Descripción</label>
-          <input 
-          className="form-input"
-          placeholder="Ingrese descripción del producto"
-          name="description"
-          ref={register({
-            required: {
-                value: true, 
-                }
-            })}
-            onChange={actualizaState}
-         >
-          </input>
-          {errors.description && <span className="form-error">Se requiere la descripcion
-          del producto</span>}
-          <label>Sku</label>
-          <input 
-          className="form-input"
-          placeholder="Ingrese sku del producto"
-          name="sku"
-          ref={register({
-            required: {
-                type:Number,
-                value: true, 
-                },
-                minLength:2
-            })}
-            onChange={actualizaState}
-         >
-          </input>
-          {errors.description && <span className="form-error">Ingrese minimo 2 digitos</span>}
-          <label>Area</label>
-          <input 
-          className="form-input"
-          placeholder="Ingrese area del producto"
-          name="area"
-          ref={register({
-            required: {
-                value: true, 
-                }
-            })}
-            onChange={actualizaState}>
-          </input>
-          {errors.area && <span className="form-error">Se requiere el area del producto</span>}
-          <label>Fecha de retiro</label>
-          <input 
-          type="Date" 
-          className="form-input"
-          name="date_retirement"
-          onChange={actualizaState}></input>
-          <label>Fecha de vencimiento</label>
-          <input 
-          type="Date" 
-          className="form-input"
-          name="date_expiration"
-          onChange={actualizaState}></input>
+          <div className="form-input-item">
+            <label>Descripción</label>
+                <input 
+                    className="form-input"
+                    placeholder="Ingrese descripción del producto"
+                    name="description"
+                    ref={register({
+                      required: {
+                          value: true, 
+                          }
+                      })}
+                      onChange={actualizaState}
+                    >
+                    </input>
+                    {errors.description && <span className="form-error">Se requiere la descripcion
+                    del producto</span>}
+          </div>
+          <div className="form-input-item">
+            <label>Sku</label>
+                <input 
+                className="form-input"
+                placeholder="Ingrese sku del producto"
+                name="sku"
+                ref={register({
+                  required: {
+                      type:Number,
+                      value: true, 
+                      },
+                      minLength:2
+                  })}
+                  onChange={actualizaState}
+                >
+                </input>
+                {errors.description && <span className="form-error">Ingrese minimo 2 digitos</span>}
+          </div>
+          <div className="form-input-item">
+            <label>Area</label>
+                <input 
+                    className="form-input"
+                    placeholder="Ingrese area del producto"
+                    name="area"
+                    ref={register({
+                      required: {
+                          value: true, 
+                          }
+                      })}
+                      onChange={actualizaState}>
+                    </input>
+                    {errors.area && <span className="form-error">Se requiere el area del producto</span>}
+          </div>
+          <div className="form-input-item">
+            <label>Fecha de retiro</label>
+                <input 
+                type="Date" 
+                className="form-input"
+                name="date_retirement"
+                onChange={actualizaState}>
+                </input>
+           </div>
+           <div className="form-input-item">
+                <label>Fecha de vencimiento</label>
+                <input 
+                type="Date" 
+                className="form-input"
+                name="date_expiration"
+                onChange={actualizaState}>
+                </input>
+          </div>
+          <div className="form-input-item">       
           <button 
           type="submit" 
           value="Registrar" 
@@ -126,8 +140,10 @@ const FormProduct = () => {
           Registrar
           </button>
           </div>
-          
+          </div>
       </form>  
+        </div>
+     
      );
 }
  

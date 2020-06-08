@@ -8,7 +8,6 @@ const Home = () => {
             <Navigation></Navigation>
             <FormProduct></FormProduct>
             <Footer></Footer>
-            
         </Fragment>
         
      );
