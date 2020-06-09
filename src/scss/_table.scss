@@ -1,3 +1,24 @@
+table { 
+	width: 100%; 
+	border-collapse: collapse; 
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+	background: #eee; 
+  }
+  th { 
+	background: #333; 
+	color: white; 
+	font-weight: bold; 
+  }
+  td, th { 
+	padding: 6px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+  }
+
+
+
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -38,10 +59,12 @@ only screen and (max-width: 760px),
 	/*
 	Label the data
 	*/
-	td:nth-of-type(1):before { content: "Descripcion"; }
-	td:nth-of-type(2):before { content: "Sku"; }
-	td:nth-of-type(3):before { content: "Area"; }
-	td:nth-of-type(4):before { content: "Fecha vencimiento"; }
-	td:nth-of-type(5):before { content: "Fecha retiro"; }
+	td:nth-of-type(1):before { content: "Sku:"; }
+	td:nth-of-type(2):before { content: "Descripcion:"; }
+	td:nth-of-type(3):before { content: "Cantidad"; }
+	td:nth-of-type(4):before { content: "Fecha de vencimiento:"; }
+	td:nth-of-type(5):before { content: "Dias para Retiro:"; }
+	td:nth-of-type(6):before { content: "Fecha de retiro:"; }
+	td:nth-of-type(6):before { content: "Área:"; }
 
 }

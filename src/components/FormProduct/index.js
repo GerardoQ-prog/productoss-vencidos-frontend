@@ -58,7 +58,7 @@ const FormProduct = () => {
 
     return ( 
         <div className="form-container">
-             <form className="form" onSubmit={handleSubmit(newProduct)}  >
+            <form className="form" onSubmit={handleSubmit(newProduct)}  >
           
           <div className="form__inputs-container">
           <div className="form-title">
@@ -80,7 +80,7 @@ const FormProduct = () => {
                   onChange={actualizaState}
                 >
                 </input>
-                {errors.description && <span className="form-error">Ingrese minimo 2 digitos</span>}
+                {errors.sku && <span className="form-error">Ingrese minimo 2 digitos</span>}
           </div>
           <div className="form__input-item">
             <label>Descripción</label>
@@ -114,7 +114,7 @@ const FormProduct = () => {
                       })}
                       onChange={actualizaState}>
                     </input>
-                    {errors.area && <span className="form-error">Se requiere el area del producto</span>}
+                    {errors.cantidad && <span className="form-error">Se requiere la cantidad</span>}
           </div>
           <div className="form__input-item">
                 <label>Fecha de vencimiento</label>
@@ -122,8 +122,14 @@ const FormProduct = () => {
                 type="Date" 
                 className="form-input"
                 name="date_expiration"
+                ref={register({
+                    required: {
+                        value: true, 
+                        }
+                    })}
                 onChange={actualizaState}>
                 </input>
+                {errors.date_expiration && <span className="form-error">Se requiere fecha de vencimiento</span>}
           </div>
           <div className="form__input-item">
                 <label>Dias para Retiro</label>
@@ -132,9 +138,15 @@ const FormProduct = () => {
                 min="0"
                 placeholder="Ingrese dias para retirar"
                 className="form-input"
-                name="date_expiration"
+                name="dias"
+                ref={register({
+                    required: {
+                        value: true, 
+                        }
+                    })}
                 onChange={actualizaState}>
                 </input>
+                {errors.dias && <span className="form-error">Se requiere dias para retiro</span>}
           </div>
           <div className="form__input-item">
             <label>Fecha de retiro</label>
@@ -142,8 +154,14 @@ const FormProduct = () => {
                 type="Date" 
                 className="form-input"
                 name="date_retirement"
+                ref={register({
+                    required: {
+                        value: true, 
+                        }
+                    })}    
                 onChange={actualizaState}>
                 </input>
+                {errors.date_retirement && <span className="form-error">Se requiere fecha de retiro</span>}
            </div>
            <div className="form__input-item">
             <label>Área</label>
