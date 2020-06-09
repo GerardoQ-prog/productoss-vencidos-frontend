@@ -1,15 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Footer = () => {
     return (
         <footer>
             <div className="container">
-                <a href="/">
-                    VenciApp
-                </a>
+                <Link to="/">
+                VenciApp
+                </Link>
+                    
                 <p>Gerardo J. Quispe Chavez</p>
-                <p>©Copyright 2029</p>
+                <p>©Copyright 2020</p>
             </div>
         </footer>
     )

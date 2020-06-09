@@ -9,13 +9,19 @@ const Navigation = () => {
            </div>
            <div className="nav__rigth">
                 <div className="nav-buttonlistaprod">
-                <a href="/">Registro de Productos</a>
-                </div>
+
                 <Link to="/lista">
-                <div className="nav-buttonlistaprod">
-                    Lista de Productos
+                    Registro de Productos
+                    </Link>
                 </div>
-                </Link>
+
+
+                <div className="nav-buttonlistaprod">
+                <Link to="/lista">
+                    Lista de Productos
+                    </Link>
+                </div>
+                
                 
            </div>
         </div>
