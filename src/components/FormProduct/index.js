@@ -65,23 +65,6 @@ const FormProduct = () => {
               Registro de Productos
           </div>
           <div className="form__input-item">
-            <label>Descripción</label>
-                <input 
-                    className="form-input"
-                    placeholder="Ingrese descripción del producto"
-                    name="description"
-                    ref={register({
-                      required: {
-                          value: true, 
-                          }
-                      })}
-                      onChange={actualizaState}
-                    >
-                    </input>
-                    {errors.description && <span className="form-error">Se requiere la descripcion
-                    del producto</span>}
-          </div>
-          <div className="form__input-item">
             <label>Sku</label>
                 <input 
                 className="form-input"
@@ -100,11 +83,30 @@ const FormProduct = () => {
                 {errors.description && <span className="form-error">Ingrese minimo 2 digitos</span>}
           </div>
           <div className="form__input-item">
-            <label>Area</label>
+            <label>Descripción</label>
                 <input 
                     className="form-input"
-                    placeholder="Ingrese area del producto"
-                    name="area"
+                    placeholder="Ingrese descripción del producto"
+                    name="description"
+                    ref={register({
+                      required: {
+                          value: true, 
+                          }
+                      })}
+                      onChange={actualizaState}
+                    >
+                    </input>
+                    {errors.description && <span className="form-error">Se requiere la descripcion
+                    del producto</span>}
+          </div>         
+          <div className="form__input-item">
+            <label>Cantidad</label>
+                <input 
+                type="Number"
+                min="0"
+                    className="form-input"
+                    placeholder="Ingrese cantidad"
+                    name="cantidad"
                     ref={register({
                       required: {
                           value: true, 
@@ -115,6 +117,26 @@ const FormProduct = () => {
                     {errors.area && <span className="form-error">Se requiere el area del producto</span>}
           </div>
           <div className="form__input-item">
+                <label>Fecha de vencimiento</label>
+                <input 
+                type="Date" 
+                className="form-input"
+                name="date_expiration"
+                onChange={actualizaState}>
+                </input>
+          </div>
+          <div className="form__input-item">
+                <label>Dias para Retiro</label>
+                <input 
+                type="Number" 
+                min="0"
+                placeholder="Ingrese dias para retirar"
+                className="form-input"
+                name="date_expiration"
+                onChange={actualizaState}>
+                </input>
+          </div>
+          <div className="form__input-item">
             <label>Fecha de retiro</label>
                 <input 
                 type="Date" 
@@ -123,14 +145,20 @@ const FormProduct = () => {
                 onChange={actualizaState}>
                 </input>
            </div>
-          <div className="form__input-item">
-                <label>Fecha de vencimiento</label>
+           <div className="form__input-item">
+            <label>Área</label>
                 <input 
-                type="Date" 
-                className="form-input"
-                name="date_expiration"
-                onChange={actualizaState}>
-                </input>
+                    className="form-input"
+                    placeholder="Ingrese área"
+                    name="cantidad"
+                    ref={register({
+                      required: {
+                          value: true, 
+                          }
+                      })}
+                      onChange={actualizaState}>
+                    </input>
+                    {errors.area && <span className="form-error">Se requiere el area del producto</span>}
           </div>
           <div className="form__input-item">  
           <button 

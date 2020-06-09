@@ -5,10 +5,11 @@ const Footer = () => {
     return (
         <footer>
             <div className="container">
-                <a href="">
-                    Logo
+                <a href="/">
+                    VenciApp
                 </a>
-                <p>Todos los derechos reservados</p>
+                <p>Gerardo J. Quispe Chavez</p>
+                <p>©Copyright 2020</p>
             </div>
         </footer>
     )
