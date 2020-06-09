@@ -59,11 +59,12 @@ const FormProduct = () => {
     return ( 
         <div className="form-container">
              <form className="form" onSubmit={handleSubmit(newProduct)}  >
+          
+          <div className="form__inputs-container">
           <div className="form-title">
               Registro de Productos
           </div>
-          <div className="form-inputs">
-          <div className="form-input-item">
+          <div className="form__input-item">
             <label>Descripción</label>
                 <input 
                     className="form-input"
@@ -80,7 +81,7 @@ const FormProduct = () => {
                     {errors.description && <span className="form-error">Se requiere la descripcion
                     del producto</span>}
           </div>
-          <div className="form-input-item">
+          <div className="form__input-item">
             <label>Sku</label>
                 <input 
                 className="form-input"
@@ -98,7 +99,7 @@ const FormProduct = () => {
                 </input>
                 {errors.description && <span className="form-error">Ingrese minimo 2 digitos</span>}
           </div>
-          <div className="form-input-item">
+          <div className="form__input-item">
             <label>Area</label>
                 <input 
                     className="form-input"
@@ -113,7 +114,7 @@ const FormProduct = () => {
                     </input>
                     {errors.area && <span className="form-error">Se requiere el area del producto</span>}
           </div>
-          <div className="form-input-item">
+          <div className="form__input-item">
             <label>Fecha de retiro</label>
                 <input 
                 type="Date" 
@@ -122,7 +123,7 @@ const FormProduct = () => {
                 onChange={actualizaState}>
                 </input>
            </div>
-           <div className="form-input-item">
+          <div className="form__input-item">
                 <label>Fecha de vencimiento</label>
                 <input 
                 type="Date" 
@@ -131,17 +132,17 @@ const FormProduct = () => {
                 onChange={actualizaState}>
                 </input>
           </div>
-          <div className="form-input-item">       
+          <div className="form__input-item">  
           <button 
           type="submit" 
-          value="Registrar" 
           className="form-btnregistro"
           >
-          Registrar
+            Registrar
           </button>
           </div>
+
           </div>
-      </form>  
+            </form>  
         </div>
      
      );
