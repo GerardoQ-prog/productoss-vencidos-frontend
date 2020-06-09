@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Navigation = () => {
     return ( 
@@ -8,11 +9,14 @@ const Navigation = () => {
            </div>
            <div className="nav__rigth">
                 <div className="nav-buttonlistaprod">
-                <a href="/lista">Registro de Productos</a>
+                <a href="/">Registro de Productos</a>
                 </div>
+                <Link to="/lista">
                 <div className="nav-buttonlistaprod">
-                <a href="/lista">Lista de Productos</a>
+                    Lista de Productos
                 </div>
+                </Link>
+                
            </div>
         </div>
      );
