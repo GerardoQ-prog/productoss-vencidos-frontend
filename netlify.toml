@@ -1,0 +1,17 @@
+##[[redirects]]
+#  from = "/old-path"
+#  to = "/new-path"
+#  status = 301
+#  force = false
+#  query = {path = ":path"}
+#  conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
+[[redirects]]
+from = "/"
+to = "/"
+status = 200
+force = false
+[[redirects]]
+from = "/lista"
+to = "/lista"
+status = 200
+force = false
