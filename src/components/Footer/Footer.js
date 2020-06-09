@@ -9,7 +9,7 @@ const Footer = () => {
                     VenciApp
                 </a>
                 <p>Gerardo J. Quispe Chavez</p>
-                <p>©Copyright 2020</p>
+                <p>©Copyright 2029</p>
             </div>
         </footer>
     )
