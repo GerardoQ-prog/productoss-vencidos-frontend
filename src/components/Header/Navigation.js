@@ -10,7 +10,7 @@ const Navigation = () => {
            <div className="nav__rigth">
                 <div className="nav-buttonlistaprod">
 
-                <Link to="/lista">
+                <Link to="/">
                     Registro de Productos
                     </Link>
                 </div>
