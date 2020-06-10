@@ -22,7 +22,7 @@ const FormProduct = () => {
         Axios.post('/products',product)
         .then(res =>{
             //validar si hay errores de mongo
-            if(res.data.code === 11000){
+            if(res.data.code === 404){
                 Swal.fire({
                     type:'error',
                     title:'Hubo un error',
@@ -168,7 +168,7 @@ const FormProduct = () => {
                 <input 
                     className="form-input"
                     placeholder="Ingrese área"
-                    name="cantidad"
+                    name="area"
                     ref={register({
                       required: {
                           value: true, 
