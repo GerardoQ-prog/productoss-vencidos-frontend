@@ -6,8 +6,8 @@ const App = () => {
     return ( 
         <Router>
             <Switch>
-                <Route path="/lista" component={Products} exact ></Route>
-                <Route path="/" component={Home}></Route>
+                <Route path="/lista" component={Products} exact/>
+                <Route path="/" component={Home}/>
 
             </Switch>
         </Router>
