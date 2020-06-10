@@ -57,11 +57,13 @@ const Products = () => {
                {
                    products.map(product =>(
                     <tr key={product._id}>
-                        <td>{product.description}</td>
                         <td>{product.sku}</td>
-                        <td>{product.area}</td>
-                        <td>{product.date_retirement}</td>
+                        <td>{product.description}</td>
+                        <td>{product.cantidad}</td>
                         <td>{product.date_expiration}</td> 
+                        <td>{product.dias}</td>
+                        <td>{product.date_retirement}</td>
+                        <td>{product.area}</td>
                     </tr>
                    ))
                } 
